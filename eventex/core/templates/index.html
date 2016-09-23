@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8">         
+        <meta name="viewport" content="width=device-width, initial-scale=1">         
+        <title>Eventex - O maior encontro hacker do mundo!</title>         
+        <meta name="description" content="">         
+        <meta name="author" content="">
+        <!-- Favicons
+    ================================================== -->
+        <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-touch-icon-72x72.png' %}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-touch-icon-114x114.png' %}">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+        <!-- Slider
+ ================================================== -->
+        <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" media="screen">
+        <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet" media="screen">
+        <!-- Stylesheet
+    ================================================== -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
+        <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+function initialize() {
+  var mapProp = {
+    zoom: 14,
+    center: new google.maps.LatLng(-22.902488, -43.175939), //change the coordinates
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel: false,
+    styles: [{featureType:'all',stylers:[{saturation:-100},{gamma:0.90}]}]
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(-22.902488, -43.175939) //change the coordinates
+    });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+    </head>
+    <body>
+        <div id="preloader">
+            <div id="status">
+                <img src="{% static 'img/preloader.gif' %}" height="64" width="64" alt="">
+            </div>
+        </div>
+        <!-- Navigation
+    ==========================================-->
+        <nav id="menu" class="navbar navbar-default navbar-fixed-top"> 
+            <div class="container"> 
+                <!-- Brand and toggle get grouped for better mobile display -->                 
+                <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                    </button>                     
+                    <a class="navbar-brand"></i>Eventex
+                    <strong></strong>
+                </a>                 
+            </div>             
+            <!-- Collect the nav links, forms, and other content for toggling -->             
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                {% include 'nav.html' only%}
+            </div>             
+            <!-- /.navbar-collapse -->             
+        </div>         
+        <!-- /.container-fluid -->         
+    </nav>     
+    <!-- Header -->     
+    <header class="text-center" name="home"> 
+        <div class="intro-text"> 
+            <h1 class="wow fadeInDown">EVENTEX <strong><span class="color">BRASIL</span></strong></h1> 
+            <p class="wow fadeInDown">O maior encontro hacker do mundo!</p> 
+            <a href="#conferencia" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Mais info</a> 
+        </div>         
+    </header>     
+    <!-- Services Section -->     
+    <div id="conferencia" class="text-center"> 
+        <div class="container"> 
+            <div class="section-title wow fadeInDown"> 
+                <h2 class="textoh2">A <strong>CONFERÊNCIA</strong></h2>
+                <hr>                 
+                <div class="clearfix"></div>                 
+                <p class="lead">A maior reunião de hackers do mundo.<br>Reunindo profissionais e entusiastas dos quatro<br>cantos do planeta, o Eventex é o lugar onde você precisa estar.</p> 
+                <div class="col-md-4 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <h4></h4> 
+                </div>
+                <div class="col-md-4 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <br>
+                    <a href="#register" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Inscrever-se</a> 
+                    <br>
+                    <br> 
+                    <p class="lead">Evento imperdivel, Garanta ja a sua vaga!</p> 
+                </div>
+                <div class="col-md-4 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <h4></h4> 
+                </div>
+            </div>             
+            <div class="space"></div>             
+            <div class="row"> 
+                <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="200ms"> 
+                    <h4></h4> 
+                </div>                 
+                <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="600ms"> 
+                    <h4></h4> 
+                </div>                 
+                <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="800ms"> 
+                    <h4></h4> 
+                </div>                 
+            </div>             
+        </div>         
+    </div>
+                      <!-- About Section -->
+        <div id="about-section">
+            <div class="container">
+                <div class="section-title text-center wow fadeInDown">
+                    <h2><strong>Palestrantes Convidados</strong></h2>
+                    <hr>
+                    <div class="clearfix"></div>
+                </div>
+                {% for speaker in speakers %}
+                <div class="img">
+                    <div class="text-center col-md-3 col-md-offset-2">
+                        <img class="img-responsive center-block speakers" src="{{ speaker.photo }}">
+                        <h4><a href="{{ speaker.get_absolute_url }}">{{ speaker.name }}</a></h4>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    <div id="sponsors" class="text-center">
+        <div class="container"> 
+            <div class="section-title text-center wow fadeInDown"> 
+                <h2 class="textoh2"><strong>PATROCINADORES</strong></h2>
+                <hr>                 
+                <div class="clearfix"></div>                 
+                <p class="lead"><i>Contamos com grandes colaboradores que ajuda o Eventex acontecer.</i></p>
+                <br>
+                <h3>Gold</h3>
+                <br>
+                <div class="col-md-2 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> </div>
+                <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-gold-01.png' %}" alt="logo">
+                </div>
+                <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-gold-02.png' %}" alt="logo">
+                </div>
+                <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-gold-03.png' %}" alt="logo">
+                </div>                 
+            </div>             
+        </div>
+        <div class="container"> 
+            <br>
+            <div class="section-title text-center wow fadeInDown"> 
+                <h3>Silver</h3>
+                <br>
+                <div class="col-md-2 col-sm-6 service wow fadeInUp" data-wow-delay="400ms">
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-silver-01.png' %}" alt="logo">
+                </div>
+                <div class="col-md-2 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-silver-02.png' %}" alt="logo">
+                </div>
+                <div class="col-md-2 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-silver-03.png' %}" alt="logo">
+                </div>
+                <div class="col-md-2 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-silver-04.png' %}" alt="logo">
+                </div>
+                <div class="col-md-2 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-silver-05.png' %}" alt="logo">
+                </div>
+                <div class="col-md-2 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                    <img class="img-responsive center-block" src="{% static 'img/sponsor-silver-06.png' %}" alt="logo">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+</div>
+            <br>
+            <br>
+            <div class="col-md-6 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                <br>
+                <br>
+                <br>
+                <br> 
+                <p class="lead"><b>SEJA UM PATROCINADOR</b></p>
+                <p class="lead">Interessado? Descubra as oportunidades e benefícios.</p> 
+                <a href="#contact-section" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">informe-se</a> 
+                <br> 
+            </div>
+            <div class="col-md-2 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                <h4></h4> 
+            </div>
+        </div>         
+    </div>
+    <!-- Team Section -->     
+    <div id="register" class="text-center">
+        <div class="container">
+            <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+</div>
+            <div class="col-md-6 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                <br>
+                <h2 class="textoh2"><strong>INSCRIÇÃO</strong></h2>
+                <br>
+                <br>
+                <h3>Inscrições abertas!</h3>
+                <br>
+                <br><br>
+                <a href="{% url 'subscriptions:new' %}" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Inscrevase já!</a>
+                <br> 
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="col-md-1 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+                <h4></h4> 
+            </div>
+        </div>
+    </div>     
+    <!-- Testimonials Section -->     
+    <div id="local" class="text-center">
+        <div class="col-md-1 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> 
+
+        </div>
+                 <div class="col-md-5 col-sm-6 service wow fadeInUp" data-wow-delay="400ms">
+                    <br>
+                <h2 class="textoh2"><strong>Bar Samba Caffé</strong></h2>
+                <br>
+                        <p class="lead"><i>Melhor que qualquer centro de convenções.</i></p> 
+                        <p><b>Rua do Ouvidor 23, Centro<br>
+                        Rio de Janeiro, RJ</b></p> 
+
+        </div>
+
+        <div id="googleMap" class="local">
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>     
+    <!-- Contact Section -->     
+    <div id="contact-section" class="text-center"> 
+        <div class="container"> 
+            <div class="section-title wow fadeInDown"> 
+                <h2 class="textoh2"><strong>Contate-nos</strong></h2>
+                <hr>                 
+                <h3>Se você tiver qualquer dúvida ou comentário pode contactar-nos.</h3> 
+            </div>             
+            <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-delay="200ms"> 
+                <div class="col-md-4"> 
+                    <i class="fa fa-map-marker fa-2x"></i> 
+                    <p>Rua do Ouvidor 23, Centro<br> 
+          Rio de Janeiro, RJ</p> 
+                </div>                 
+                <div class="col-md-4"> 
+                    <i class="fa fa-envelope-o fa-2x"></i> 
+                    <p>contato@eventex.com.br</p> 
+                </div>                 
+                <div class="col-md-4"> 
+                    <i class="fa fa-phone fa-2x"></i> 
+                    <p> (21) 2364-8465</p> 
+                </div>                 
+                <div class="clearfix"></div>                 
+            </div>             
+            <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-delay="400ms"> 
+                <h3>Deixe-nos sua mensagem:</h3> 
+                <form name="sentMessage" id="contactForm" novalidate> 
+                    <div class="row"> 
+                        <div class="col-md-6"> 
+                            <div class="form-group"> 
+                                <input type="text" id="name" class="form-control" placeholder="Nome" required="required">                                 
+                                <p class="help-block text-danger"></p> 
+                            </div>                             
+                        </div>                         
+                        <div class="col-md-6"> 
+                            <div class="form-group"> 
+                                <input type="email" id="email" class="form-control" placeholder="E-mail" required="required">                                 
+                                <p class="help-block text-danger"></p> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="form-group"> 
+                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Mensagem" required></textarea>                         
+                        <p class="help-block text-danger"></p> 
+                    </div>                     
+                    <div id="success"></div>                     
+                    <button type="submit" class="btn btn-default">Enviar Mensagem</button>                     
+                </form>                 
+                <div class="social"> 
+                    <ul> 
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>                         
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                        </li>                         
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+    <div id="footer"> 
+        <div class="container"> 
+            <p>Copyright © 2016 Eventex - WTTD</p>
+        </div>         
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>     
+    <script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script>     
+    <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.isotope.js' %}"></script>     
+    <script type="text/javascript" src="{% static 'js/jqBootstrapValidation.js' %}"></script>     
+    <script type="text/javascript" src="{% static 'js/contact_me.js' %}"></script>     
+    <script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>     
+    <!-- Javascripts
+    ================================================== -->     
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+
+        </body>
+</html>

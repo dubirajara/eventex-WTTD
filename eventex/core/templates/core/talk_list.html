@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Palestras{% endblock title %}
+
+
+{% block content %}
+
+    <section id="about-section">
+    <br>
+    <div class="container">
+        <br>
+        <div class="talks">
+            <br>
+           <h2>Manha</h2>
+            {% for talk in morning_talks %}
+             {% include 'core/talk_list_snippet.html' with talk=talk only  %}
+             {% empty %}
+                <br>
+             <p>Ainda nao existem palestras de manha.</p>
+            {% endfor %}
+            <br>
+            <br>
+            <h2>Tarde</h2>
+            {% for talk in afternoon_talks %}
+            {% include 'core/talk_list_snippet.html' with talk=talk only %}
+            {% empty %}
+                <br>
+             <p>Ainda nao existem palestras de tarde.</p>
+            {% endfor %}
+        <br>
+            <br>
+
+            </div>
+    <br><br>
+        </div>
+    </section>
+
+
+{% endblock content %}
+
+{% block footer %}class="footero"{% endblock footer %}

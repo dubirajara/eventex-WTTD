@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Eventex - O maior encontro hacker do mundo!{% endblock title %}
+
+{% block content %}
+
+ <section id="register" class="text-center">
+     <div class="container">
+         <div class="section-title wow fadeInUp" data-wow-delay="100ms">
+             <br>
+             <h2><strong>Formulário de Inscrição</strong></h2>
+             <hr>
+             <form action="." method="post">
+                     {% csrf_token %}
+                        {{ form.non_field_errors }}
+                     <div class="form-row label-block input-text">
+                        <p>{{ form.name.label }}:</p>
+                         <label for="{{ form.name.id_for_label }}"></label>
+                         {{ form.name.errors }}
+                         {{ form.name }}
+                     </div>
+                     <div class="form-row label-block input-text">
+                         <p>{{ form.cpf.label }}:</p>
+                         <label for="{{ form.cpf.id_for_label }}"></label>
+                         {{ form.cpf.errors }}
+                         {{ form.cpf }}
+                     </div>
+                     <div class="form-row label-block input-text">
+                         <p>{{ form.email.label }}:</p>
+                         <label for="{{ form.email.id_for_label }}"></label>
+                         {{ form.email.errors }}
+                         {{ form.email }}
+                     </div>
+                     <div class="form-row label-block input-text">
+                         <p>{{ form.phone.label }}:</p>
+                         <label for="{{ form.phone.id_for_label }}"></label>
+                         {{ form.phone.errors }}
+                         {{ form.phone }}
+                     </div>
+                     <input type="submit" value="Enviar!" class="btn btn-default"/>
+                 </form>
+             </div>
+         </div>
+ </section>
+
+{% endblock content %}
+
+{% block footer %}id="footer"{% endblock footer %}
