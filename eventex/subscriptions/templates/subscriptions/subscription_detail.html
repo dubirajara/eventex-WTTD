@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Eventex - O maior encontro hacker do mundo!{% endblock title %}
+
+{% block content %}
+
+ <div id="sponsors" class="text-center">
+ <div class="container">
+            <div class="section-title text-center wow fadeInDown">
+             <br>
+                 <br>
+                <br>
+                <br>
+             <h2><strong>Obrigada por se inscrever</strong></h2>
+             <hr>
+                <div class="clearfix"></div>
+
+            <p><strong>Estes foram os dados que você nos forneceu em sua inscrição:</strong></p>
+<br>
+            <ul>
+                <li>Nome: {{ subscription.name }}</li>
+                <li>CPF: {{ subscription.cpf }}</li>
+                <li>Email: {{ subscription.email }}</li>
+                <li>Telefone: {{ subscription.phone }}</li>
+            </ul>
+                <br>
+
+            <p><strong>Em até 48 horas úteis, a nossa equipe entrará em contato com você para concluirmos sua matrícula.</strong></p>
+                 <br>
+                <br>
+                <br>
+                 <br>
+                <br>
+                <br>
+                <br>
+             </div>
+         </div>
+ </div>
+
+{% endblock content %}
+
+{% block footer %}class="footero"{% endblock footer %}
