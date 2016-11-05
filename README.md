@@ -7,6 +7,7 @@ Demo: https://eventex-diegoubirajara.herokuapp.com
 [![Build Status](https://travis-ci.org/dubirajara/eventex-WTTD.svg?branch=master)](https://travis-ci.org/dubirajara/eventex-WTTD)
 [![codecov.io](https://codecov.io/github/dubirajara/eventex-WTTD/coverage.svg?branch=master)](https://codecov.io/github/dubirajara/eventex-WTTD?branch=master)
 [![Code Health](https://landscape.io/github/dubirajara/eventex-WTTD/master/landscape.svg?style=flat)](https://landscape.io/github/dubirajara/eventex-WTTD/master)
+[![Requirements Status](https://requires.io/github/dubirajara/eventex-WTTD/requirements.svg?branch=master)](https://requires.io/github/dubirajara/eventex-WTTD/requirements/?branch=master)
 
 
 ## Como desenvolver?
