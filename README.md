@@ -1,6 +1,6 @@
 # Eventex
 
-Sistema de eventos encomendado pela Morena.
+Sistema de eventos.
 
 Demo: https://eventex-diegoubirajara.herokuapp.com
 
