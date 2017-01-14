@@ -6,7 +6,8 @@ Demo: https://eventex-diegoubirajara.herokuapp.com
 
 [![Build Status](https://travis-ci.org/dubirajara/eventex-WTTD.svg?branch=master)](https://travis-ci.org/dubirajara/eventex-WTTD)
 [![Code Health](https://landscape.io/github/dubirajara/eventex-WTTD/master/landscape.svg?style=flat)](https://landscape.io/github/dubirajara/eventex-WTTD/master)
-[![Requirements Status](https://requires.io/github/dubirajara/eventex-WTTD/requirements.svg?branch=master)](https://requires.io/github/dubirajara/eventex-WTTD/requirements/?branch=master)
+[![Updates](https://pyup.io/repos/github/dubirajara/eventex-wttd/shield.svg)](https://pyup.io/repos/github/dubirajara/eventex-wttd/)
+
 
 
 ## How Dev? Running locally.
