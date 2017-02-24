@@ -13,7 +13,7 @@ Demo: https://eventex-diegoubirajara.herokuapp.com
 ## How Dev? Running locally.
 
 1. Clone the repository.
-2. Create a virtualenv with Python 3.5.
+2. Create a virtualenv with Python 3
 3. Activate the virtualenv.
 4. Install the dependencies.
 5. Set up your local configuration file .env
