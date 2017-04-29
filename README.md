@@ -1,6 +1,6 @@
 # Eventex
 
-Events & Conferences Web app. Developed using [Django Framework](https://www.djangoproject.com).
+Events & Conferences Web app. Developed using [Django](https://www.djangoproject.com).
 
 Demo: https://eventex-diegoubirajara.herokuapp.com
 
