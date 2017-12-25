@@ -1,9 +1,18 @@
 language: python
 python:
   - "3.6"
+services: postgresql
+addons:
+  postgresql: '9.6'
+env:
+   - DATABASE_URL=postgres://postgres@localhost/eventexdb
 install:
   - cp contrib/env-sample .env
   - pip install -q -r requirements.txt
+before_script:
+  - psql -c "CREATE DATABASE eventexdb;" -U postgres
+  - python manage.py migrate
+  - python manage.py collectstatic --no-input
 script:
   - coverage run --source='eventex' manage.py test
 before_install:
