@@ -1,2 +1,2 @@
 -r requirements.txt
-ipython[notebook]==6.2.1
+ipython[notebook]==6.3.1
