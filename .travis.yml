@@ -15,7 +15,5 @@ before_script:
   - python manage.py collectstatic --no-input
 script:
   - coverage run --source='eventex' manage.py test
-before_install:
-  - pip install codecov
 after_success:
-  - codecov
+  - coveralls
