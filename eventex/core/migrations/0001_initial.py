@@ -16,7 +16,8 @@ class Migration(migrations.Migration):
             name='Contact',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('kind', models.CharField(choices=[('E', 'Email'), ('P', 'Telefone ')], max_length=1, verbose_name='tipo')),
+                ('kind', models.CharField(choices=[('E', 'Email'), ('P', 'Telefone ')],
+                                          max_length=1, verbose_name='tipo')),
                 ('value', models.CharField(max_length=255, verbose_name='valor')),
             ],
             options={
@@ -56,7 +57,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Course',
             fields=[
-                ('talk_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='core.Talk')),
+                ('talk_ptr', models.OneToOneField(
+                    auto_created=True, on_delete=django.db.models.deletion.CASCADE,
+                    parent_link=True, primary_key=True, serialize=False, to='core.Talk')),
                 ('slots', models.IntegerField()),
             ],
             options={
@@ -73,6 +76,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='contact',
             name='speaker',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.Speaker', verbose_name='palestrante'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                    to='core.Speaker', verbose_name='palestrante'),
         ),
     ]

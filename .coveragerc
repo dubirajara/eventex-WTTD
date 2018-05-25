@@ -1,0 +1,5 @@
+[run]
+omit =
+    eventex/wsgi.py
+    eventex/core/apps.py
+    eventex/subscriptions/apps.py
