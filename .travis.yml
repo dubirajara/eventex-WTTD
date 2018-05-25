@@ -16,6 +16,6 @@ before_script:
 script:
   - coverage run --source='eventex' manage.py test
 before_install:
-  - pip install coverage
+  - pip install codecov
 after_success:
-  - coveralls
+  - codecov
