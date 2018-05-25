@@ -34,6 +34,7 @@ class SpeakerModelAdmin(admin.ModelAdmin):
 
     phone.short_description = 'telefone'
 
+
 class TalkModelAdmin(admin.ModelAdmin):
     def get_queryset(self, request):
         qs = super().get_queryset(request)

@@ -16,7 +16,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='subscription',
             name='cpf',
-            field=models.CharField(max_length=11, validators=[eventex.subscriptions.validators.validate_cpf], verbose_name='CPF'),
+            field=models.CharField(max_length=11, validators=[eventex.subscriptions.validators.validate_cpf],
+                                   verbose_name='CPF'),
         ),
         migrations.AlterField(
             model_name='subscription',

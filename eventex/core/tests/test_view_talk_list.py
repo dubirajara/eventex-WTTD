@@ -5,12 +5,9 @@ from eventex.core.models import Talk, Speaker, Course
 
 class TalkListGet(TestCase):
     def setUp(self):
-        t2 = Talk.objects.create(title='Titulo da Palestra', start='10:00',
-                                description='Descriçao da Palestra.')
-        t1 = Talk.objects.create(title='Titulo da Palestra', start='13:00',
-                                description='Descriçao da Palestra.')
-        c1 = Course.objects.create(title='Titulo do Curso', start='09:00',
-                                      description='Descriçao do curso.', slots=20)
+        t2 = Talk.objects.create(title='Titulo da Palestra', start='10:00', description='Descriçao da Palestra.')
+        t1 = Talk.objects.create(title='Titulo da Palestra', start='13:00', description='Descriçao da Palestra.')
+        c1 = Course.objects.create(title='Titulo do Curso', start='09:00', description='Descriçao do curso.', slots=20)
 
         speaker = Speaker.objects.create(name='Henrique Bastos',
                                          slug='henrique-bastos',
@@ -18,7 +15,6 @@ class TalkListGet(TestCase):
         t1.speakers.add(speaker)
         t2.speakers.add(speaker)
         c1.speakers.add(speaker)
-
 
         self.resp = self.client.get(r('talk_list'))
 
@@ -44,8 +40,6 @@ class TalkListGet(TestCase):
         for count, expected in contents:
             with self.subTest():
                 self.assertContains(self.resp, expected, count)
-
-
 
     def test_context(self):
         variables = ['morning_talks', 'afternoon_talks']

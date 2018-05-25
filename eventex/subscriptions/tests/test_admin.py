@@ -24,18 +24,14 @@ class SubscriptionModelAdminTest(TestCase):
         # Verifica resultado
         self.assertEqual(1, Subscription.objects.filter(paid=True).count())
 
-
     def test_message(self):
         """It should send a message to the user"""
-
         mock = self.call_action()
         mock.assert_called_once_with(None, '1 inscriçao foi marcada como paga.')
 
-
     def call_action(self):
-         # montando una query
+        # montando una query
         queryset = Subscription.objects.all()
-
         mock = Mock()
         old_message_user = SubscriptionModelAdmin.message_user
         SubscriptionModelAdmin.message_user = mock
@@ -46,4 +42,3 @@ class SubscriptionModelAdminTest(TestCase):
         SubscriptionModelAdmin.message_user = old_message_user
 
         return mock
-
