@@ -1,3 +1,4 @@
 eventex/core/static/* linguist-vendored
 eventex/core/templates/* linguist-vendored
-
+*.css linguist-vendored
+*.js linguist-vendored
